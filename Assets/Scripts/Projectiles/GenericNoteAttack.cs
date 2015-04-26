@@ -34,7 +34,7 @@ public class GenericNoteAttack : CustomProjectile {
 			else
 				directionKnockback = 1;
 			
-			enemy.knockback (directionKnockback,this.getKnockback (),this.getKnockbackVertical());
+			enemy.knockback (directionKnockback, 20f, 40f); //TODO remove hardcoded values
 			enemy.damage (this.getDamage ());
 			this.die (true);
 		}
