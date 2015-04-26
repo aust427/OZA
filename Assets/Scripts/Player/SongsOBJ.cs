@@ -52,9 +52,17 @@ public class SongsOBJ : MonoBehaviour
 	
 	public Combo Scale = new Combo("C Major Scale", ScalesOBJ.cMinor, 0, "123456789", 9, 10f, "Med", true, "A Test scale. This does not exist");
 	
-	public Combo OtJ1 = new Combo ("Ode to Joy (Beethoven's 9th)", ScalesOBJ.cMajor, 0, "334554321123322", 16, 4f, "Med", false, "");
-	public Combo OtJ2 = new Combo ("Ode to Joy (Beethoven's 9th)", ScalesOBJ.cMajor, 1, "334554321123322"+"334554321123211", 16, 4f, "Arpegginade", true, "Arguably Beethoven's happiest song.");
+	public Combo OtJ1 = new Combo ("Ode to Joy", ScalesOBJ.cMajor, 0, "334554321123322", 16, 4f, "Med", false, "");
+	public Combo OtJ2 = new Combo ("Ode to Joy", ScalesOBJ.cMajor, 1, "334554321123322"+"334554321123211", 16, 4f, "Arpegginade", true, "Arguably Beethoven's happiest song. A rendition of his 9th Symphony.");
 
+	/// D Minor
+	public Combo BotG1 = new Combo ("Skward Sword Theme", ScalesOBJ.dMinor, 0, "1323478542", 24, 4f, "Med", false, ""); 
+	public Combo BotG2 = new Combo ("Skward Sword Theme", ScalesOBJ.dMinor, 1, "1323478542"+"111422111422", 24, 4f, "Med", false, ""); 
+	public Combo BotG3 = new Combo ("Skward Sword Theme", ScalesOBJ.dMinor, 2, "1323478542"+"111422111422"+"13234785421132778", 36, 4f, "Med", true, "Formally known as Ballad of the Goddess, this is the main theme of the 2011 Game, The Legend of Zelda: Skward Sword. Fun fact is that if you played the song backwards, it sounds a lot like Zelda's Lullaby."); 
+	
+	public Combo Unra1 = new Combo ("Unravel", ScalesOBJ.dMinor, 0, "18778777665653", 16, 4f, "Med", false, ""); 
+	public Combo Unra2 = new Combo ("Unravel", ScalesOBJ.dMinor, 1, "18778777665653"+"38777665686", 12, 4f, "Med", false, ""); 
+	public Combo Unra3 = new Combo ("Unravel", ScalesOBJ.dMinor, 2, "18778777665653"+"38777665686"+"68756665456", 12, 4f, "Med", true, "The opening theme of the 2014 anime, Tokyo Ghoul. Song is by Tk from Ling Tosite Sigure."); 
 	// For debug purposes, initialize with songs in the list.
 	void Awake()
 	{
