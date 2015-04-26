@@ -28,18 +28,15 @@ public class SongsListPanel : MonoBehaviour
 
 	void Start ()
 	{
-		for (int i = 0; i < songs.comboList.Count; i++)
+		for (int i = 0; i < songs.significantComboList.Count; i++)
 		{
-			if (songs.comboList[i].finalPart)		// Only adds full songs
-			{
-				newInstance = Instantiate (buttonBase) as GameObject;
-				newInstance.transform.SetParent(thisPanel.transform, false);
-				info = newInstance.GetComponent<SongButton>();
-				info.name = songs.comboList[i].name;
-				newInstance.name = info.name;
-				newInstance.GetComponentInChildren<Text>().text = info.name;
-				numberOfButtons++;
-			}
+			newInstance = Instantiate (buttonBase) as GameObject;
+			newInstance.transform.SetParent(thisPanel.transform, false);
+			info = newInstance.GetComponent<SongButton>();
+			info.name = songs.significantComboList[i].name;
+			newInstance.name = info.name;
+			newInstance.GetComponentInChildren<Text>().text = info.name;
+			numberOfButtons++;
 		}
 	}
 
@@ -58,7 +55,7 @@ public class SongsListPanel : MonoBehaviour
 				newInstance = Instantiate (buttonBase) as GameObject;
 				newInstance.transform.SetParent(thisPanel.transform, false);
 				info = newInstance.GetComponent<SongButton>();
-				info.name = songs.comboList[i].name;
+				info.name = songs.significantComboList[i].name;
 				newInstance.name = info.name;
 				newInstance.GetComponentInChildren<Text>().text = info.name;
 				numberOfButtons++;
