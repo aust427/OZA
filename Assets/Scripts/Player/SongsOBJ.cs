@@ -51,7 +51,9 @@ public class SongsOBJ : MonoBehaviour
 	public Combo MHLL4 = new Combo ("Mary Had a Little Lamb", ScalesOBJ.cMajor, 3, "6545666"+"555"+"688"+"6545666655654", 14, 20f, "SlowMed", true, "Shoots debug garbage for now. Have fun.");
 	
 	public Combo Scale = new Combo("C Major Scale", ScalesOBJ.cMinor, 0, "123456789", 9, 10f, "Med", true, "A Test scale. This does not exist");
-
+	
+	public Combo OtJ1 = new Combo ("Ode to Joy (Beethoven's 9th)", ScalesOBJ.cMajor, 0, "334554321123322", 16, 4f, "Med", false, "");
+	public Combo OtJ2 = new Combo ("Ode to Joy (Beethoven's 9th)", ScalesOBJ.cMajor, 1, "334554321123322"+"334554321123211", 16, 4f, "Arpegginade", true, "Arguably Beethoven's happiest song.");
 
 	// For debug purposes, initialize with songs in the list.
 	void Awake()
