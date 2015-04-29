@@ -233,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: f037201dd27c5e446aa647f3d869361d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 17c2afc9987f8774a8249851fc4fdb29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 049e5c95669a7164da01f87e588a5a91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2f9f92d0f3156340b705da9573bde32, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -501,7 +501,7 @@ RectTransform:
   m_GameObject: {fileID: 176112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .949999988, y: .699999988, z: 1}
   m_Children: []
   m_Father: {fileID: 22476114}
   m_RootOrder: 0
