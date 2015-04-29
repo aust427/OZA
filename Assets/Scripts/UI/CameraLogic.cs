@@ -15,15 +15,14 @@ public class CameraLogic : MonoBehaviour
 	
 	void Update ()
 	{
-		if (shake > 0)
-		{
-			//mainCamera.transform.localPosition = Random.insideUnitSphere * shakeMult * shake;
-			mainCamera.transform.localPosition = new Vector3 ((float)Random.Range (-2,2) * shakeMult * shake, ((float)Random.Range (-2,2) * shakeMult * shake) + 0.1733569f, -10);
-			shake -= Time.deltaTime * decreaseTime;
-		}
-		else
-		{
-			shake = 0.0f;
+		if (!PauseMenu.pauseMenuOpen) {
+			if (shake > 0) {
+				//mainCamera.transform.localPosition = Random.insideUnitSphere * shakeMult * shake;
+				mainCamera.transform.localPosition = new Vector3 ((float)Random.Range (-2, 2) * shakeMult * shake, ((float)Random.Range (-2, 2) * shakeMult * shake) + 0.1733569f, -10);
+				shake -= Time.deltaTime * decreaseTime;
+			} else {
+				shake = 0.0f;
+			}
 		}
 	
 	// Got rid of this debug screenshake call!

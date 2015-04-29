@@ -103,7 +103,7 @@ public class CharacterKontroller : MonoBehaviour {
 		if (player.getKnockback() && rigidbody2D.velocity.y > 3)
 			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 1);
 
-		if (grounded && Input.GetKeyDown (keyJump) && rigidbody2D.velocity.y < 0 && reachedApex) 
+		if (grounded && Input.GetKeyDown (keyJump) && rigidbody2D.velocity.y < 0 && reachedApex && !PauseMenu.pauseMenuOpen) 
 		{
 			anim.SetBool ("Ground", false);
 			rigidbody2D.AddForce (new Vector2 (0, (-50*rigidbody2D.velocity.y)));
@@ -111,7 +111,7 @@ public class CharacterKontroller : MonoBehaviour {
 		}
 
 
-		if (grounded && Input.GetKeyDown(keyJump) && reachedApex)
+		if (grounded && Input.GetKeyDown(keyJump) && reachedApex && !PauseMenu.pauseMenuOpen)
 		{
 			anim.SetBool("Ground",false);
 			rigidbody2D.AddForce (new Vector2(0, jumpForce));
