@@ -19,7 +19,7 @@ public class MusicMenuScript : MonoBehaviour {
 	Vector2 initial;
 	// Control variables
 	bool menuCanBeOpened = false;
-	bool menuCurrentlyOpen = false;
+	public static bool menuCurrentlyOpen = false; // Remove public static
 
 	// Sounds
 	AudioClip clickSound;
@@ -46,7 +46,7 @@ public class MusicMenuScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		menuCanBeOpened = Physics2D.OverlapCircle(menuObject.position, openRadius, menuOpener); //When in range, menu can be opened
+		menuCanBeOpened = !(!Physics2D.OverlapCircle(menuObject.position, openRadius, menuOpener) || PauseMenu.pauseMenuOpen); //When in range, menu can be opened
 		standLight.enabled = menuCanBeOpened;
 		anim.SetBool("Animating", menuCanBeOpened); // Animate the menu object if the menu can be opened
 		if (!menuCurrentlyOpen && menuCanBeOpened && Input.GetKeyDown(KeyCode.E)) 	// Opening menu

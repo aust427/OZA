@@ -120,7 +120,7 @@ public class CombatControllerIII : MonoBehaviour {
 		
 
 		////// CAN PLAY STUFF //////		
-		canPlay = !playerScript.onLadder;
+		canPlay = !(playerScript.onLadder || PauseMenu.pauseMenuOpen);
 		
 			////// NOTE PLAYING //////
 		
