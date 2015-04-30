@@ -200,7 +200,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.02999997, y: -6.75500011, z: 0}
+  m_LocalPosition: {x: -1.59399998, y: .663999975, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469758}
@@ -530,6 +530,7 @@ MonoBehaviour:
   R: 8
   instrument: Violin
   majorKey: 1
+  resetTimer: 0
 --- !u!114 &11452480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -579,6 +580,7 @@ MonoBehaviour:
   maxSpeed: 3
   facingRight: 1
   healthBar: {fileID: 0}
+  armorBar: {fileID: 0}
   grounded: 0
   groundCheck: {fileID: 469762}
   whatIsGround:
@@ -593,6 +595,8 @@ MonoBehaviour:
   notTraversable: 0
   reachedApex: 1
   onLadder: 0
+  movementEnabled: 1
+  reEnableMovementTimer: 0
   move: 0
   keyRight: 100
   keyLeft: 97

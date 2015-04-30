@@ -107,9 +107,23 @@ public class DamageableObject : MonoBehaviour {
 	public void damage(float amount) {
 		if (this.isDamageable) {
 			Debug.Log ("Damaged: " + amount);
+			if (armor > 0)
+				damageArmor (amount);
+			else 
+				this.setHealth (this.health - amount);
 			if (this.iFrameDuration > 0)
 				this.startIFrame();
-			this.setHealth (this.health - amount);
+		}
+	}
+
+	public void damageArmor (float amount) {
+		float armorValue = this.armor;
+		if (armorValue - amount > 0)
+			this.setArmor (armorValue - amount);
+		else {
+			this.setArmor (0);
+			Debug.Log ("Damage overflow of " + (amount-armorValue));
+			damage (amount - armorValue);
 		}
 	}
 
@@ -153,6 +167,13 @@ public class DamageableObject : MonoBehaviour {
 	}
 
 	/**
+	 * Places a health bar above the object
+	 **/
+	public void updateHealthBar() {
+
+	}
+
+	/**
 	 * Sets the object's health to 0, thus calling the die() method through
 	 * setHealth();
 	 **/
@@ -175,7 +196,7 @@ public class DamageableObject : MonoBehaviour {
 	void Start () {
 		this.Customize ();
 		this.health = this.maxHealth;
-		this.armor = this.maxArmor;
+		//this.armor = this.maxArmor;
 		sRenderer = GetComponent<SpriteRenderer>();
 	}
 
@@ -204,6 +225,13 @@ public class DamageableObject : MonoBehaviour {
 
 		if (this.getHealth () > this.getMaxHealth())
 			this.setHealth (this.getMaxHealth());
+
+		// Health bar above object - not implemented yet
+		/* Health bar does not appear until object is hit
+		if (hasHealthBar)
+			updateHealthBar ();
+		*/
+
 	}
 
 	// Regular update
