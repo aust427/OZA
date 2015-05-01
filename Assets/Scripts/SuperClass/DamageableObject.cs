@@ -52,6 +52,8 @@ public class DamageableObject : MonoBehaviour {
 
 	private float knockbackTime = 0f;
 
+	SpriteRenderer sRenderer;
+
 	// Getters and setters
 	public float getMaxHealth() {return this.maxHealth;}
 	public void setMaxHealth(float value) {this.maxHealth = value;}
@@ -105,9 +107,23 @@ public class DamageableObject : MonoBehaviour {
 	public void damage(float amount) {
 		if (this.isDamageable) {
 			Debug.Log ("Damaged: " + amount);
+			if (armor > 0)
+				damageArmor (amount);
+			else 
+				this.setHealth (this.health - amount);
 			if (this.iFrameDuration > 0)
 				this.startIFrame();
-			this.setHealth (this.health - amount);
+		}
+	}
+
+	public void damageArmor (float amount) {
+		float armorValue = this.armor;
+		if (armorValue - amount > 0)
+			this.setArmor (armorValue - amount);
+		else {
+			this.setArmor (0);
+			Debug.Log ("Damage overflow of " + (amount-armorValue));
+			damage (amount - armorValue);
 		}
 	}
 
@@ -123,11 +139,22 @@ public class DamageableObject : MonoBehaviour {
 		if (this.isDamageable) {
 			Debug.Log ("Knocking back object for amount: " + power);
 			rigidbody2D.AddForce (new Vector2 (direction * power, upPower));
-			this.knockbackTime = 75;
+			this.knockbackTime = 5;
 			this.inKnockback = true;
 
 			if (this.isPlayer)
+			{
 				CameraLogic.ShakeItUp(0.25f, 0.2f, 1.0f);
+				rigidbody2D.AddForce(new Vector2 (direction * power / 10, upPower / 10));
+				GameObject player = GameObject.FindGameObjectWithTag("Player");
+				player.GetComponent<CharacterKontroller>().movementEnabled = false;		// Disable player movement when hit
+				player.GetComponent<CharacterKontroller>().reEnableMovementTimer = 0f;	// And reset the timer so it can count to threshold
+			}
+			if (this.tag == "Enemy")
+			{
+				this.GetComponent<ZombieFollow>().canMove = false;						// Same as if player.
+				this.GetComponent<ZombieFollow>().reEnableMovementTimer = 0f;
+			}
 		}
 	}
 
@@ -137,6 +164,13 @@ public class DamageableObject : MonoBehaviour {
 	public void startIFrame() {
 		this.isDamageable = false;
 		this.iFrameTime = this.iFrameDuration;
+	}
+
+	/**
+	 * Places a health bar above the object
+	 **/
+	public void updateHealthBar() {
+
 	}
 
 	/**
@@ -162,7 +196,8 @@ public class DamageableObject : MonoBehaviour {
 	void Start () {
 		this.Customize ();
 		this.health = this.maxHealth;
-		this.armor = this.maxArmor;
+		//this.armor = this.maxArmor;
+		sRenderer = GetComponent<SpriteRenderer>();
 	}
 
 	// Customize the variables for the object, overriden in each object subclass
@@ -173,10 +208,15 @@ public class DamageableObject : MonoBehaviour {
 	void FixedUpdate () {
 		if (this.iFrameDuration > 0 && this.iFrameTime > 0) {
 			this.iFrameTime--;
-			//Debug.Log("Object is invincibile!");
+
+			// Flips between opacity states
+			if (this.iFrameTime % 10 < 5) sRenderer.color = new Color(1f,1f,1f,.5f);
+			else sRenderer.color = new Color(1f,1f,1f,1f);
 		}
-		else if (this.iFrameTime >= 0)
+		else if (this.iFrameTime >= 0) { // End invincibility
+			sRenderer.color = new Color(1f,1f,1f,1f);
 			this.setDamageable(true);
+		}
 
 		if (this.knockbackTime > 0)
 			this.knockbackTime--;
@@ -185,6 +225,13 @@ public class DamageableObject : MonoBehaviour {
 
 		if (this.getHealth () > this.getMaxHealth())
 			this.setHealth (this.getMaxHealth());
+
+		// Health bar above object - not implemented yet
+		/* Health bar does not appear until object is hit
+		if (hasHealthBar)
+			updateHealthBar ();
+		*/
+
 	}
 
 	// Regular update
