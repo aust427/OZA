@@ -47,25 +47,36 @@ public class DamageableObject : MonoBehaviour {
 	protected bool isDead = false,
 				   hasHealthBar = true,
 				   isDamageable = true,
-				   inKnockback = false,
-				   isPlayer = false;
+				   inKnockback = false;
 
 	private float knockbackTime = 0f;
+	private float healthPercentage;
 
+	// For the iframe animation
 	SpriteRenderer sRenderer;
+
+	// For the floating health bar
+	//Transform parentTransform;
+	public GameObject floatingHealthBar;
+	GameObject fhb;
 
 	// Getters and setters
 	public float getMaxHealth() {return this.maxHealth;}
 	public void setMaxHealth(float value) {this.maxHealth = value;}
 	public float getHealth() {return this.health;}
 	public void setHealth(float value) {
-		if (value <= 0)
-			die();
+		if (value <= 0) {
+			healthPercentage = 0f;
+			updateHealthBar();
+			die ();
+		}
 		else {
 			if (value >= this.maxHealth)
 				this.health = this.maxHealth;
 			this.health = value;
 		}
+		healthPercentage = this.health / this.maxHealth;
+		updateHealthBar ();
 	}
 	public float getMaxArmor() {return this.maxArmor;}
 	public void setMaxArmor(float value) {this.maxArmor = value;}
@@ -83,8 +94,10 @@ public class DamageableObject : MonoBehaviour {
 	public bool getDamageable() {return this.isDamageable;}
 	public void setDamageable(bool value) {this.isDamageable = value;}
 	public bool getKnockback() {return this.inKnockback;} // Potentially worthless
-	public bool getIsPlayer() {return this.isPlayer;}
-	public void setIsPlayer(bool value) {this.isPlayer = value;}
+	public bool getIsPlayer() {return this.tag == "Player";}
+
+	public bool getHasHealthBar() {return this.hasHealthBar;}
+	public void setHasHealthBar(bool value) {this.hasHealthBar = value;}
 
 	// Manipulation methods
 
@@ -96,6 +109,14 @@ public class DamageableObject : MonoBehaviour {
 	 * 		Points of health to heal
 	 **/
 	public void heal(float amount) {this.setHealth (this.health + amount);}
+
+	/**
+	 * Adds the specified amount of armor.
+	 * 
+	 * @param	amount
+	 * 		Points of armor to add
+	 **/
+	public void addArmor(float amount) {this.setArmor (this.armor + amount);}
 
 	/**
 	 * Damages the object for the set amount. The setHealth() method checks
@@ -116,6 +137,13 @@ public class DamageableObject : MonoBehaviour {
 		}
 	}
 
+	/**
+	 * Damages the armor for the set amount. If there is not enough armor,
+	 * the damage overflows to the health.
+	 * 
+	 * @param	amount
+	 * 		Points of armor to damage
+	 **/
 	public void damageArmor (float amount) {
 		float armorValue = this.armor;
 		if (armorValue - amount > 0)
@@ -142,7 +170,7 @@ public class DamageableObject : MonoBehaviour {
 			this.knockbackTime = 5;
 			this.inKnockback = true;
 
-			if (this.isPlayer)
+			if (this.tag == "Player")
 			{
 				CameraLogic.ShakeItUp(0.25f, 0.2f, 1.0f);
 				rigidbody2D.AddForce(new Vector2 (direction * power / 10, upPower / 10));
@@ -170,7 +198,8 @@ public class DamageableObject : MonoBehaviour {
 	 * Places a health bar above the object
 	 **/
 	public void updateHealthBar() {
-
+		if (this.hasHealthBar)
+			fhb.GetComponent<SpriteRenderer>().sprite = Resources.Load ("HPBars/hp" + (int)(healthPercentage * 10) + "0", typeof(Sprite)) as Sprite;
 	}
 
 	/**
@@ -195,9 +224,19 @@ public class DamageableObject : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.Customize ();
+		//Time.timeScale = 0.1f;
 		this.health = this.maxHealth;
 		//this.armor = this.maxArmor;
+
 		sRenderer = GetComponent<SpriteRenderer>();
+
+		// Instantiates health bar as a child of the parent
+		if (this.hasHealthBar) {
+			Transform parentTransform = GetComponent<Transform>();
+			fhb = Instantiate(floatingHealthBar) as GameObject;
+			fhb.transform.parent = parentTransform;
+			fhb.transform.position = new Vector2(parentTransform.position.x, (float)(parentTransform.position.y + .3f));
+		}		
 	}
 
 	// Customize the variables for the object, overriden in each object subclass
@@ -226,6 +265,15 @@ public class DamageableObject : MonoBehaviour {
 		if (this.getHealth () > this.getMaxHealth())
 			this.setHealth (this.getMaxHealth());
 
+		if (hasHealthBar) {
+			Vector2 tempScale = fhb.transform.localScale;
+			Debug.Log("Scale is at: " + tempScale.x);
+			if (tempScale.x < 0) {
+				Debug.Log("Scale below 0");
+				tempScale.x *= -1;// = new Vector2 (.25f, .25f);
+				fhb.transform.localScale = tempScale;
+			}
+		}
 		// Health bar above object - not implemented yet
 		/* Health bar does not appear until object is hit
 		if (hasHealthBar)

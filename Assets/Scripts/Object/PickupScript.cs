@@ -8,6 +8,7 @@ public class PickupScript : MonoBehaviour {
 	InstrumentsOBJ instruments;
 	ScalesOBJ scales;
 	SongsOBJ songs;
+	DamageableObject playerHealth;
 	
 	public bool trumpet = false;
 
@@ -39,13 +40,23 @@ public class PickupScript : MonoBehaviour {
 	public bool OtJ = false; 
 	public bool BotG = false;
 	public bool Unra = false;
-	
+
+	public bool health10 = false,
+				health25 = false,
+				health50 = false,
+				health100 = false;
+
+	public bool armor10 = false,
+				armor50 = false,
+				armor100 = false;
+
 	void Awake ()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		instruments = player.GetComponent<InstrumentsOBJ> ();
 		scales = player.GetComponent<ScalesOBJ> ();
 		songs = player.GetComponent<SongsOBJ> ();
+		playerHealth = player.GetComponent<DamageableObject> ();
 	}
 		
 	void OnTriggerEnter2D(Collider2D other)
@@ -106,6 +117,20 @@ public class PickupScript : MonoBehaviour {
 			scales.scaleList.Add (ScalesOBJ.dMinor);
 		if (ebMajor)
 			scales.scaleList.Add (ScalesOBJ.ebMajor);
+		if (health10)
+			playerHealth.heal (10);
+		if (health25)
+			playerHealth.heal (25);
+		if (health50)
+			playerHealth.heal (50);
+		if (health100)
+			playerHealth.heal (100);
+		if (armor10)
+			playerHealth.addArmor (10);
+		if (armor50)
+			playerHealth.addArmor (50);
+		if (armor100)
+			playerHealth.addArmor (100);
 			
 		if (MHLL)
 		{
