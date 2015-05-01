@@ -8,7 +8,9 @@ public class CharacterKontroller : MonoBehaviour {
 	public bool facingRight = true;
 
 	DamageableObject player;
-	public Slider healthBar;
+	public RectTransform healthBar;
+	public RectTransform armorBar;
+	private float originalHeight, barLengthMax, barLengthMin;
 	Animator anim;
 
 	public bool grounded = false;
@@ -38,6 +40,9 @@ public class CharacterKontroller : MonoBehaviour {
 	void Start () {
 		player = GetComponent < DamageableObject > ();
 		anim = GetComponent < Animator > ();
+
+		barLengthMax = healthBar.position.x;
+		barLengthMin = healthBar.position.x - healthBar.rect.width + 28;
 	}
 	
 	//  FixedUpdate is called once per frame
@@ -121,10 +126,19 @@ public class CharacterKontroller : MonoBehaviour {
 		{
 			reachedApex = true;
 		}
-		
 
-		// Quick healthbar stuff
-		healthBar.value = player.getHealth () / player.getMaxHealth ();
+		// New health bar and armor bar stuff
+		float currentHealthBarPosition = player.getHealth() * (barLengthMax - barLengthMin) / player.getMaxHealth() + barLengthMin;
+		if (player.getHealth () > 0)
+			healthBar.position = new Vector2 (currentHealthBarPosition, healthBar.position.y);
+		else
+			healthBar.position = new Vector2 (-100,healthBar.position.y);
+		float currentArmorBarPosition = player.getArmor() * (barLengthMax - barLengthMin) / player.getMaxArmor() + barLengthMin;
+		if (player.getArmor () > 0)
+			armorBar.position = new Vector2 (currentArmorBarPosition, armorBar.position.y);
+		else
+			armorBar.position = new Vector2 (-100, armorBar.position.y);
+
 	}
 
 	void Flip()
