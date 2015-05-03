@@ -44,16 +44,80 @@ public class SongsOBJ : MonoBehaviour
 
 	////// COMBO DEFINITIONS //////
 	/// ("Song Name", "scale", "Part of Song", "Notes to Play it", "# of Notes Including Rests", "Damage", "Effect", "If End of Song", "Description")
+	/// E Major
+
+	/// E Minor
+
+	/// F Major
+	public Combo HBtY1 = new Combo ("Happy Birthday Song", ScalesOBJ.fMajor, 0, "1121431", 9, 4f, "Med", false, ""); 
+	public Combo HBtY2 = new Combo ("Happy Birthday Song", ScalesOBJ.fMajor, 1, "1121431" + "121541", 9, 4f, "Med", false, "");
+	public Combo HBtY3 = new Combo ("Happy Birthday Song", ScalesOBJ.fMajor, 2, "1121431" + "121541" + "186432665454", 15, 4f, "Med", true, "Happy Birthday!");
+
+	/// F Minor
+	public Combo LaPB1 = new Combo ("Like a Plastic Bag", ScalesOBJ.fMinor, 0, "57754344333443334433", 32, 4f, "Med", false, "");
+	public Combo LaPB2 = new Combo ("Like a Plastic Bag", ScalesOBJ.fMinor, 1, "57754344333443334433"+"57754344333443334433", 32, 4f, "Med", false, "");
+	public Combo LaPB3 = new Combo ("Like a Plastic Bag", ScalesOBJ.fMinor, 2, "57754344333443334433"+"57754344333443334433"+"57754344333443334433", 32, 4f, "Med", true, "A parody of Firework.");
+	
+	                               
+	/// F#/Gb Major
+
+	/// F#/Gb Minor
+
+	/// G Major
+
+	/// G Minor
+
+	/// G#/Ab Major
+
+	/// G#/Ab Minor
+
+	/// A Major
+
+	/// A Minor
+
+	/// A#/Bb Major
+
+	/// A#/Bb Minor
+
+	/// B Major
+
+	/// B Minor
+	public Combo RadAct1 = new Combo ("Radioactive", ScalesOBJ.bMinor, 0, "888775777442", 16, 4f, "Med", false, "");
+	public Combo RadAct2 = new Combo ("Radioactive", ScalesOBJ.bMinor, 1, "888775777442"+"5454515451545451333341", 22, 4f, "Med", true, "The 2012 hit by the band Imagine Dragons, Radioactive."); 
+
 	/// C Major
 	public Combo MHLL1 = new Combo ("Mary Had a Little Lamb", ScalesOBJ.cMajor, 0, "6545666", 7, 4f, "Arpegginade", false, "");			// Mary Had a Little Lamb
 	public Combo MHLL2 = new Combo ("Mary Had a Little Lamb", ScalesOBJ.cMajor, 1, "6545666"+"555", 4, 10f, "Med", false, "");
 	public Combo MHLL3 = new Combo ("Mary Had a Little Lamb", ScalesOBJ.cMajor, 2, "6545666"+"555"+"688", 4, 10f, "Med", false, "");
-	public Combo MHLL4 = new Combo ("Mary Had a Little Lamb", ScalesOBJ.cMajor, 3, "6545666"+"555"+"688"+"6545666655654", 14, 20f, "SlowMed", true, "Shoots debug garbage for now. Have fun.");
+	public Combo MHLL4 = new Combo ("Mary Had a Little Lamb", ScalesOBJ.cMajor, 3, "6545666"+"555"+"688"+"6545666655654", 14, 20f, "SlowMed", true, "The first song programed into the game! Shoots debug garbage for now. Have fun.");
 	
 	public Combo Scale = new Combo("C Major Scale", ScalesOBJ.cMinor, 0, "123456789", 9, 10f, "Med", true, "A Test scale. This does not exist");
 	
 	public Combo OtJ1 = new Combo ("Ode to Joy", ScalesOBJ.cMajor, 0, "334554321123322", 16, 4f, "Med", false, "");
 	public Combo OtJ2 = new Combo ("Ode to Joy", ScalesOBJ.cMajor, 1, "334554321123322"+"334554321123211", 16, 4f, "Arpegginade", true, "Arguably Beethoven's happiest song. A rendition of his 9th Symphony.");
+
+	public Combo JttW1 = new Combo ("Joy to the World", ScalesOBJ.cMajor, 0, "87654321566778", 13, 4f, "Med", false, ""); 
+	public Combo JttW2 = new Combo ("Joy to the World", ScalesOBJ.cMajor, 1, "87654321566778"+"8876554388765543", 16, 4f, "Med", false, "");
+	public Combo JttW3 = new Combo ("Joy to the World", ScalesOBJ.cMajor, 2, "87654321566778"+"8876554388765543"+"33334543222343218654343218", 24, 4f, "Med", true, "A popular Christmas carol!");
+
+	/// C Minor
+	public Combo TtFaFC1 = new Combo ("TtFaF (Chorus)", ScalesOBJ.cMinor, 0, "55788874575", 15, 4f, "Med", false, "");
+	public Combo TtFaFC2 = new Combo ("TtFaF (Chorus)", ScalesOBJ.cMinor, 1, "55788874575"+"34445435", 10, 4f, "Med", false, "");
+	public Combo TtFaFC3 = new Combo ("TtFaF (Chorus)", ScalesOBJ.cMinor, 2, "55788874575"+"34445435"+"55788874575453344455578", 25, 4f, "Med", true, "The chorus from the song Through the Fire and Flames, by the band DragonForce. Possibly their most famous song, it was featured in the video game fanchise Guitar Hero.");
+	
+	public Combo TtFaFI1 = new Combo ("TtFaF (Intro)", ScalesOBJ.cMinor, 0, "313131313131515151515151414141414141313131212121", 32, 4f, "Med", false, "");
+	public Combo TtFaFI2 = new Combo ("TtFaF (Intro)", ScalesOBJ.cMinor, 1, "313131313131515151515151414141414141313131212121"+"3313313133133131551551515515515144144141441411413313313122121121", 64, 4f, "Med", true, "The chorus from the song Through the Fire and Flames, by the band DragonForce. Infamous for it's difficulty, now you can experience it too!");
+
+	/// C#/Db Major
+
+	/// C#/Db Minor
+	public Combo MHWGOS1 = new Combo ("Titanic Theme (Solo)", ScalesOBJ.dbMinor, 0, "344565434765312", 40, 4f, "Med", false, "");
+	public Combo MHWGOS2 = new Combo ("Titanic Theme (Solo)", ScalesOBJ.dbMinor, 1, "344565434765312"+"344565434757855543", 40, 4f, "Med", true, "The pennywhistle solo for the song My Heart Will Go On.");
+
+	public Combo MHWGOC1 = new Combo ("Titanic Theme (Chorus)", ScalesOBJ.dbMinor, 0, "334476545654323212", 32, 4f, "Med", false, ""); 
+	public Combo MHWGOC2 = new Combo ("Titanic Theme (Chorus)", ScalesOBJ.dbMinor, 1, "334476545654323212" + "3344765456543233234565433", 40, 4f, "Med", true, "The chorus for the song My Heart Will Go On.");
+
+	/// D Major
 
 	/// D Minor
 	public Combo BotG1 = new Combo ("Skward Sword Theme", ScalesOBJ.dMinor, 0, "1323478542", 24, 4f, "Med", false, ""); 
@@ -62,7 +126,8 @@ public class SongsOBJ : MonoBehaviour
 	
 	public Combo Unra1 = new Combo ("Unravel", ScalesOBJ.dMinor, 0, "18778777665653", 16, 4f, "Med", false, ""); 
 	public Combo Unra2 = new Combo ("Unravel", ScalesOBJ.dMinor, 1, "18778777665653"+"38777665686", 12, 4f, "Med", false, ""); 
-	public Combo Unra3 = new Combo ("Unravel", ScalesOBJ.dMinor, 2, "18778777665653"+"38777665686"+"68756665456", 12, 4f, "Med", true, "The opening theme of the 2014 anime, Tokyo Ghoul. Song is by Tk from Ling Tosite Sigure."); 
+	public Combo Unra3 = new Combo ("Unravel", ScalesOBJ.dMinor, 2, "18778777665653"+"38777665686"+"68756665456", 12, 4f, "Med", true, "The opening theme of the 2014 anime, Tokyo Ghoul. The song is originally by TK from Ling Tosite Sigure."); 
+	
 	// For debug purposes, initialize with songs in the list.
 	void Awake()
 	{

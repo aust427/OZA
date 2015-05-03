@@ -10,7 +10,7 @@
 	
 
    F Minor: 1
-	Like a Plastic Bag (Katy Perry)						57754344333443334433 57754344333443334433 57754344333443334433 (Achievement: "Like a Plastic Bag") 
+//	Like a Plastic Bag (Katy Perry)						57754344333443334433 57754344333443334433 57754344333443334433 (Achievement: "Like a Plastic Bag") 
 	Firework (Katy Perry)								7654435 7654431 7654445 76544431
 
 -- F#/Gb Major: 2 
@@ -22,7 +22,7 @@
 
 
 5- G Major: 3
-	Wake me Up When September Ends (Green Day)			23123323316532152151123 23323323343215152151123 (Puts enemies to sleep in an x radius for 5s, 10s (Add up effect))
+	Wake me Up When September Ends (Green Day)			23123323316532152151123 2332332334321152151123 (Puts enemies to sleep in an x radius for 5s, 10s (Add up effect))
 	Make a Man Out of You (Mulan)						63523523452 63523523455 56781112114321 56781112114321 56781112114321 11111132178 (Strength buff) 
 	 
 
@@ -60,21 +60,21 @@
 	 
 
    B Minor: 7
-	 Radioactive (Imagine Dragons)						888775777442 5454515451545451333341 (part two notes have chance of poisoning, last note 100% poison)
+//	 Radioactive (Imagine Dragons)						888775777442 5454515451545451333341 (part two notes have chance of poisoning, last note 100% poison)
 
 3- C Major: 8
-	Ode to Joy 											87654321 566778 8876554388765543 3333454322234 3218654343218
+//	Joy to the World 									87654321566778 8876554388765543 33334543222343218654343218
 **#	Clarity (Zedd) 										25525665523587 55256655223587 	(Needs 9th note/sharps in chorus?) 
-	Mary Had a Little Lamb 								654566 655568 86545666655654
+	//Mary Had a Little Lamb 								654566 655568 86545666655654
 	Hallelujah (Jeff Buckley) 							35666533 356665343211
 ###	Mario Overworld	(Mario 64)							3331357 (Needs sharps and flats) 
-	Ode to Joy (Bethoven's 9th)							334554321123322 334554321123211
+	//Ode to Joy (Bethoven's 9th)							334554321123322 334554321123211
 	My Dearest (Supercell)								1876552343434321 18765523433443565 1876552343432111 1221
 	 
 
 4- C Minor: 8
-	Through the Fire and Flames (Intro, Dragonforce)	313131313131 515151515151 414141414141 313131212121 3313313133133131 5515515155155151 4414414144141141 3313313122121121 (This needs an achievement "Better than Dragonforce") 
-	Through the Fire and Flames (Chorus, Dragonforce)	55788874575 34445435 5578887457545 3344455578
+	//Through the Fire and Flames (Intro, Dragonforce)	313131313131 515151515151 414141414141 313131212121 3313313133133131 5515515155155151 4414414144141141 3313313122121121 (This needs an achievement "Better than Dragonforce") 
+//	Through the Fire and Flames (Chorus, Dragonforce)	55788874575 34445435 55788874575453344455578
 	Turning Tables (Adele)								757566653345 7575666533457 876543346513333 (Zombies hit are dizzy for 3s, 5s, 7s (can stack))
 	Symphony No. 5 (Beethoven)							5553 4442 55533338 66642227 5543 5543 5543 1 5
 	 
@@ -83,17 +83,17 @@
 	 
 
    C#/Db Minor: 9
-   	My Heart Will Go On (Celine Dion) (Solo)			344565434765312 344565434757855543 (Achievement: "Pennywhistle Virtuoso" if played on Pennywhistle) 
-   	My Heart Will Go On (Celine Dion) (Chorus)			334476545654323212 3344765456543233234565433 (Ice based attacks on the second half, finish with ice note that can freeze enemy for 10 sec except bosses) 
+ //  	My Heart Will Go On (Celine Dion) (Solo)			344565434765312 344565434757855543 (Achievement: "Pennywhistle Virtuoso" if played on Pennywhistle) 
+  // 	My Heart Will Go On (Celine Dion) (Chorus)			334476545654323212 3344765456543233234565433 (Ice based attacks on the second half, finish with ice note that can freeze enemy for 10 sec except bosses) 
 
 9- D Major: 10
 	Canon in D (Pachabel) 								87654345 87654345 876543453
 	 
 
 0- D Minor: 10
-	Balled of the Goddess (LoZ SS)						1323478542 111422111422 1323478542113278 
+//	Balled of the Goddess (LoZ SS)						1323478542 111422111422 1323478542113278 
 ###	Tocotta and Fugue (Needs sharps/flats obviously)
-	Unravel (TK from LTS)								18778777665653 38777665676 68756665456
+//	Unravel (TK from LTS)								18778777665653 38777665676 68756665456
 	 
 
 7- D#/Eb Major: 11
@@ -271,66 +271,3 @@ Song... SONG QUEUE
 		Big Bang Theory Theme
 		The Office Theme
 		Game of Thrones Theme
-
-		
-		if (Input.GetKeyDown (KeyCode.Alpha1)) //A Major
-		{
-			R = 5;
-			ChangeKeyMajor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha2)) //A Minor
-		{
-			R = 5;
-			ChangeKeyMinor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha3)) //C Major
-		{
-			R = 8;
-			ChangeKeyMajor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha4)) //C Minor
-		{
-			R = 8; 
-			ChangeKeyMinor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha5)) //G Major 
-		{
-			R = 3;
-			ChangeKeyMajor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha6)) //G Minor
-		{
-			R = 3; 
-			ChangeKeyMinor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha7)) //Eb Major
-		{
-			R = 11;
-			ChangeKeyMajor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha8)) //Eb Minor
-		{
-			R = 11; 
-			ChangeKeyMinor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha9)) //D Major
-		{
-			R = 10; 
-			ChangeKeyMajor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Alpha0)) //D Major
-		{
-			R = 10; 
-			ChangeKeyMinor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Minus)) //A Major
-		{
-			R = 4; 
-			ChangeKeyMajor(R); 
-		}
-		if (Input.GetKeyDown (KeyCode.Equals)) //B Minor
-		{
-			R = 7; 
-			ChangeKeyMinor (R);
-		}
-		
