@@ -196,8 +196,21 @@ Song... SONG QUEUE
 		Elvis Song
 		
 	CLASSICAL MUSIC
-		In the Hall of the Mountain 
+		In the Hall of the Mountain King
 		Romeo and Juliet (Tchaicovsky) 
+		Ode to Joy
+		O Fortuna
+		Beethovens Fifth
+		Vivaldi Four Seasons (Spring)
+		Claire De Lune
+		Carmen Suite No 2: Habanera
+		Bach Cello Suite No 1
+		Eine Kleine Nachtmuzik, first movement
+		Meditation on Thais
+		Adagio for Strings
+		Symphony No 40 in G Minor (Mozart)
+		Peter Gynt Morning Mood
+		
 		
 	MOVIE SONGS 
 		Hobbit Theme
