@@ -76,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.48000002, y: -.779999971, z: 0}
+  m_LocalPosition: {x: 1.36199999, y: .439999998, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 467998}
@@ -201,6 +201,7 @@ MonoBehaviour:
   regeneration: 0
   iFrameDuration: 0
   iFrameTime: 0
+  floatingHealthBar: {fileID: 169076, guid: d8f95ef76d6016f479a9b80d8f0581fd, type: 2}
 --- !u!114 &11425326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,6 +247,8 @@ MonoBehaviour:
   initialPatrolTime: 5
   patrolTimer: 0
   chaseDistance: 2
+  canMove: 1
+  reEnableMovementTimer: 0
 --- !u!212 &21204756
 SpriteRenderer:
   m_ObjectHideFlags: 1

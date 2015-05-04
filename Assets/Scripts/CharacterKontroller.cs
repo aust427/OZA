@@ -42,7 +42,7 @@ public class CharacterKontroller : MonoBehaviour {
 		anim = GetComponent < Animator > ();
 
 		barLengthMax = healthBar.position.x;
-		barLengthMin = healthBar.position.x - healthBar.rect.width + 28;
+		barLengthMin = healthBar.position.x - healthBar.rect.width;
 	}
 	
 	//  FixedUpdate is called once per frame
