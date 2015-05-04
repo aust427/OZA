@@ -6,12 +6,12 @@
 	 
 
    F Major: 1
-	Happy Birthday to You								1121431 121541 186432665454 (Restores 10% HP at the end of the combo) 
+//	Happy Birthday to You								1121431 121541 186432665454 (Restores 10% HP at the end of the combo) 
 	
 
    F Minor: 1
 //	Like a Plastic Bag (Katy Perry)						57754344333443334433 57754344333443334433 57754344333443334433 (Achievement: "Like a Plastic Bag") 
-	Firework (Katy Perry)								7654435 7654431 7654445 76544431
+//	Firework (Katy Perry)								7654435 7654431 7654445 76544431
 
 -- F#/Gb Major: 2 
 	 
@@ -22,7 +22,7 @@
 
 
 5- G Major: 3
-	Wake me Up When September Ends (Green Day)			23123323316532152151123 2332332334321152151123 (Puts enemies to sleep in an x radius for 5s, 10s (Add up effect))
+//	Wake me Up When September Ends (Green Day)			23123323316532152151123 2332332334321152151123 (Puts enemies to sleep in an x radius for 5s, 10s (Add up effect))
 	Make a Man Out of You (Mulan)						63523523452 63523523455 56781112114321 56781112114321 56781112114321 11111132178 (Strength buff) 
 	 
 
@@ -50,17 +50,18 @@
    
 =- A#/Bb Major: 6
 	Karma Chemeleon (Culture Club)						33333333222321 11123211232 33333333222321 11123211
-	Pokemon Theme (Pokemon Anime)						3563356655 6678765 4888588 8887 3356633566356
+//	Pokemon Theme (Pokemon Anime)						35633566555 6678765 4888588 88873356633566356
 	 
 
    A#/Bb Minor: 6
 	 
 
    B Major: 7
-	 
+//	Yellow (Coldplay) 									165115532165115532115532
 
    B Minor: 7
 //	 Radioactive (Imagine Dragons)						888775777442 5454515451545451333341 (part two notes have chance of poisoning, last note 100% poison)
+//	Dragonborn (Skyrim)					
 
 3- C Major: 8
 //	Joy to the World 									87654321566778 8876554388765543 33334543222343218654343218
@@ -70,6 +71,7 @@
 ###	Mario Overworld	(Mario 64)							3331357 (Needs sharps and flats) 
 	//Ode to Joy (Bethoven's 9th)							334554321123322 334554321123211
 	My Dearest (Supercell)								1876552343434321 18765523433443565 1876552343432111 1221
+	//Auld Lang Syne
 	 
 
 4- C Minor: 8
@@ -80,14 +82,14 @@
 	 
 
    C#/Db Major: 9
-	 
+//	Mr Brightside										7887888788 11124334321211 111243313212
 
    C#/Db Minor: 9
  //  	My Heart Will Go On (Celine Dion) (Solo)			344565434765312 344565434757855543 (Achievement: "Pennywhistle Virtuoso" if played on Pennywhistle) 
   // 	My Heart Will Go On (Celine Dion) (Chorus)			334476545654323212 3344765456543233234565433 (Ice based attacks on the second half, finish with ice note that can freeze enemy for 10 sec except bosses) 
 
 9- D Major: 10
-	Canon in D (Pachabel) 								87654345 87654345 876543453
+//	Canon in D (Pachabel) 								87654345 87654345 876543453
 	 
 
 0- D Minor: 10
@@ -97,7 +99,7 @@
 	 
 
 7- D#/Eb Major: 11
-	Dearly Beloved (Kingdom Hearts)						66332277 66332277 88773322 117766556
+//	Dearly Beloved (Kingdom Hearts)						66332277 66332277 88773322 117766556
 	Treasure (Bruno Mars)								3343122 256113 343212 1234558
 	Eye of the Tiger (Survivor)							665665663344 665665663344 8568785687856834 66
 	Demons (Imagine Dragons)							33512555786 333334444453 33512555786 333334444453
@@ -192,7 +194,7 @@ Song... SONG QUEUE
 		
 	BOSS SONGS 
 		Thriller (Micheal Jackson) (Makes Zombies do the Zombie walk) 
-		Dovakhin (Skyrim) (FUS, FUS ROH, FUS ROH DAH)
+	//	Dovakhin (Skyrim) (FUS, FUS ROH, FUS ROH DAH)
 		Elvis Song
 		
 	CLASSICAL MUSIC

@@ -52,13 +52,18 @@ public class PickupScript : MonoBehaviour {
 	public bool HBtY = false;
 	public bool WMUWSE = false; 
 	public bool Beth5 = false;
-	public bool Imm = false;
+	public bool Nmb = false;
 	public bool Brkeven = false;
 	public bool Pmpei = false;
 	public bool StH = false;
 	public bool KarChem = false;
 	public bool DerBev = false;
 	public bool IaSWAA = false;
+	public bool Dova = false; 
+	public bool GCeA = false;
+	public bool ALS = false; 
+	public bool PachD = false;
+	public bool MrBri = false;
 	
 	void Awake ()
 	{
@@ -195,7 +200,11 @@ public class PickupScript : MonoBehaviour {
 		}
 		if (FrWrk) //Firework
 		{
-			
+			songs.comboList.Add (songs.Firework1);
+			songs.comboList.Add (songs.Firework2);
+			songs.comboList.Add (songs.Firework3);
+			songs.comboList.Add (songs.Firework4);
+			songs.significantComboList.Add (songs.Firework4);
 		}
 		if (HBtY) //Happy Birthday to You
 		{
@@ -213,37 +222,103 @@ public class PickupScript : MonoBehaviour {
 		}
 		if (WMUWSE) //Wake Me Up When September Ends
 		{
-
+			songs.comboList.Add (songs.WhenSept1);
+			songs.comboList.Add (songs.WhenSept2);
+			songs.significantComboList.Add (songs.WhenSept2);
 		}
 		if (Beth5) //Beethoven's 5th Symphony
 		{
-
+			songs.comboList.Add (songs.BSymp51);
+			songs.comboList.Add (songs.BSymp52);
+			songs.comboList.Add (songs.BSymp53);
+			songs.comboList.Add (songs.BSymp54);
+			songs.comboList.Add (songs.BSymp55);
+			songs.comboList.Add (songs.BSymp56);
+			songs.significantComboList.Add (songs.BSymp56);
 		}
 		if (DerBev) //Dearly Beloved
 		{
-
-		}
+			songs.comboList.Add (songs.DB1);
+			songs.comboList.Add (songs.DB2);
+			songs.comboList.Add (songs.DB3);
+			songs.comboList.Add (songs.DB4);
+			songs.significantComboList.Add (songs.DB4); 
+		} 
 		if (KarChem) //Karma Chemeleon
 		{
-
+			songs.comboList.Add(songs.KChem1);
+			songs.comboList.Add(songs.KChem2);
+			songs.comboList.Add(songs.KChem3);
+			songs.comboList.Add(songs.KChem4);
+			songs.significantComboList.Add (songs.KChem4);
 		}
 		if (StH) //Stairway to Heaven
 		{
-
+			songs.comboList.Add (songs.StarWay1);
+			songs.comboList.Add (songs.StarWay2);
+			songs.comboList.Add (songs.StarWay3);
+			songs.comboList.Add (songs.StarWay4);
+			songs.significantComboList.Add (songs.StarWay4);
 		}
-		if (Brkeven)
+		if (Brkeven) //Breakeven
 		{
-			
+			songs.comboList.Add (songs.Breakeven1);
+			songs.comboList.Add (songs.Breakeven2);
+			songs.comboList.Add (songs.Breakeven3);
+			songs.comboList.Add (songs.Breakeven4);
+			songs.significantComboList.Add (songs.Breakeven4);
 		}
-		if (Imm)
+		if (Nmb) //Numb 
 		{
-			
+			songs.comboList.Add (songs.Numb1);
+			songs.comboList.Add (songs.Numb2);
+			songs.comboList.Add (songs.Numb3);
+			songs.significantComboList.Add (songs.Numb3);
 		}
-		if (Pmpei)
+		if (Pmpei) //Pompeii
 		{
-			
+			songs.comboList.Add (songs.Pomp1);
+			songs.comboList.Add (songs.Pomp2);
+			songs.comboList.Add (songs.Pomp3);
+			songs.significantComboList.Add (songs.Pomp3);
 		}
-/*		if (LHFWC) //Look How Far We've Come
+		if (MrBri)  //Mr. Brightside
+		{
+			songs.comboList.Add (songs.BrghtSde1);
+			songs.comboList.Add (songs.BrghtSde2);
+			songs.comboList.Add (songs.BrghtSde3);
+			songs.significantComboList.Add (songs.BrghtSde3);
+		}
+		if (Dova) //Dovahkiin
+		{
+			songs.comboList.Add (songs.Dragbor1);
+			songs.comboList.Add (songs.Dragbor2);
+			songs.comboList.Add (songs.Dragbor3);
+			songs.comboList.Add (songs.Dragbor4);
+			songs.significantComboList.Add (songs.Dragbor4);
+		}
+		if (GCeA) //Gotta Catch 'Em All 
+		{
+			songs.comboList.Add (songs.CatchEm1);
+			songs.comboList.Add (songs.CatchEm2);
+			songs.comboList.Add (songs.CatchEm3);
+			songs.comboList.Add (songs.CatchEm4);
+			songs.significantComboList.Add (songs.CatchEm4);
+		}
+		if (ALS) //Auld Lang Syne
+		{
+			songs.comboList.Add (songs.Auld1);
+			songs.comboList.Add (songs.Auld2);
+			songs.significantComboList.Add (songs.Auld2);
+		}
+		if (PachD) //Pachabel's Canon in D
+		{
+			songs.comboList.Add (songs.CanonD1);
+			songs.comboList.Add (songs.CanonD2);
+			songs.comboList.Add (songs.CanonD3);
+			songs.significantComboList.Add (songs.CanonD3);
+		}
+	/*	if (LHFWC) //Look How Far We've Come
 		{
 			
 		}
