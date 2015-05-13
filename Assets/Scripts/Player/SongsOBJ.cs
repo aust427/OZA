@@ -241,7 +241,7 @@ public class SongsOBJ : MonoBehaviour
 			
 			
 			if (notesArray[i].Equals("0")) notesArray[i] = "E";			// The follwing 12 statements translate the array to the actual notes.
-			if (notesArray[i].Equals("1")) notesArray[i] = "F";			// ♯♭
+			if (notesArray[i].Equals("1")) notesArray[i] = "F";			// ♯♭ Some computers don't support these awesome symbols apparently D:
 			if (notesArray[i].Equals("2")) notesArray[i] = "F#";
 			if (notesArray[i].Equals("3")) notesArray[i] = "G";
 			if (notesArray[i].Equals("4")) notesArray[i] = "Ab";
@@ -254,6 +254,16 @@ public class SongsOBJ : MonoBehaviour
 			if (notesArray[i].Equals("11")) notesArray[i] = "Eb";
 		}
 		
+		return notesArray;
+	}
+	public string[] getNumbersArray(Combo combo)
+	{
+		char[] rawNotes = combo.songValue.ToCharArray(); // Let's jump through hoops for consistency's sake.
+		string[] notesArray = new string[rawNotes.Length];
+		for (int i = 0; i < notesArray.Length; i++)
+		{
+			notesArray[i] = rawNotes[i].ToString(); // World's stupidest copy.
+		}
 		return notesArray;
 	}
 	public string[] getNotesOfScale(int root, bool major)

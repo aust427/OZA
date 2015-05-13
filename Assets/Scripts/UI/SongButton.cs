@@ -68,9 +68,9 @@ public class SongButton : MonoBehaviour {
 	void FixedUpdate () 
 	{
 		if (songToView.scale.name.Equals(player.GetComponent<ScalesOBJ>().currentScale.name)) // Check if this scale's song is the one the player is using
-			songButton.GetComponentInChildren<Text>().color = new Color(0.1f, 0.8f, 0.1f, 1f);
+			songButton.GetComponentInChildren<Text>().color = new Color(0.1f, 0.8f, 0.1f, 1f); // Green for playable
 		else
-			songButton.GetComponentInChildren<Text>().color = new Color(0.8f, 0.1f, 0.1f, 1f);
+			songButton.GetComponentInChildren<Text>().color = new Color(0.8f, 0.1f, 0.1f, 1f); // Red for unplayable
 	}
 
 

@@ -34,7 +34,7 @@ public class SongController : MonoBehaviour
 	
 	}
 	
-	public void SetAllSongNotes(SongsOBJ.Combo newSong)
+	public void SetAllSongNotes(SongsOBJ.Combo newSong)	// FOR THE NOTES
 	{
 		string[] notes = songs.getNotesArray(newSong);
 		for (int i = 0; i < noteTextBoxes.Length; i++)	// Clear it first for a fresh state.
@@ -46,5 +46,16 @@ public class SongController : MonoBehaviour
 			noteTextBoxes[i].text = notes[i];
 		}
 	}
-
+	public void SetAllSongNumbers(SongsOBJ.Combo newSong) // FOR THE NUMBERS
+	{
+		string[] notes = songs.getNumbersArray(newSong);
+		for (int i = 0; i < noteTextBoxes.Length; i++)	// Clear it first for a fresh state.
+		{
+			noteTextBoxes[i].text = "";
+		}
+		for (int i = 0; i < notes.Length; i++)			// Put in the notes.
+		{
+			noteTextBoxes[i].text = notes[i];
+		}
+	}
 }
