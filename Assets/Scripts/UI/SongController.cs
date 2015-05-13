@@ -8,6 +8,7 @@ public class SongController : MonoBehaviour
 	SongsOBJ songs;
 	GameObject songController;
 	
+	public Text scaleBox;
 	public GameObject preview;
 	public Text description;
 	Text[] noteTextBoxes;
@@ -25,6 +26,7 @@ public class SongController : MonoBehaviour
 		Sprite previewSprite = Resources.Load<Sprite> ("MenuFrameContents/Song/" + newSong.name);
 		string newDesc = newSong.description;
 		
+		scaleBox.text = newSong.scale.name;
 		preview.GetComponent<Image>().sprite = previewSprite;
 		description.text = newDesc;
 		SetAllSongNotes(newSong);
