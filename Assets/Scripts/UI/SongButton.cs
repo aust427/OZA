@@ -63,6 +63,15 @@ public class SongButton : MonoBehaviour {
 			controller.SetInfo (newSong);
 		}
 	}
+	
+	
+	void FixedUpdate () 
+	{
+		if (songToView.scale.name.Equals(player.GetComponent<ScalesOBJ>().currentScale.name)) // Check if this scale's song is the one the player is using
+			songButton.GetComponentInChildren<Text>().color = new Color(0.1f, 0.8f, 0.1f, 1f);
+		else
+			songButton.GetComponentInChildren<Text>().color = new Color(0.8f, 0.1f, 0.1f, 1f);
+	}
 
 
 }
